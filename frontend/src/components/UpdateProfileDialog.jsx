@@ -51,7 +51,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         if(photoFile) formData.append('profilePhoto', photoFile)
         try {
             setLoading(true);
-            const res = await axios.post(`${BACKEND_URL}/profile/update`, formData, {
+            const res = await axios.post(`${BACKEND_URL}/user/profile/update`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

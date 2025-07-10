@@ -33,7 +33,7 @@ const Login = () => {
     e.preventDefault();
     try {
       dispatch(setLoading(true));
-      const res = await axios.post(`${BACKEND_URL}/login`, input, {
+      const res = await axios.post(`${BACKEND_URL}/user/login`, input, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -49,7 +49,7 @@ const CompanySetup = () => {
     
       setLoading(true);
       const res = await axios.put(
-        `${BACKEND_URL}/update/${params.id}`,
+        `${BACKEND_URL}/company/update/${params.id}`,
         formData,
         {
           headers: {

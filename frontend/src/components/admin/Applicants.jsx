@@ -16,7 +16,7 @@ const Applicants = () => {
     const fetcAllApplicant = async () => {
       try {
         const res = await axios.get(
-          `${BACKEND_URL}/${params.id}/applicants`,
+          `${BACKEND_URL}/application/${params.id}/applicants`,
           {
             withCredentials: true,
           }

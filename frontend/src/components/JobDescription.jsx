@@ -20,7 +20,7 @@ const JobDescription = () => {
 
   const applyJobHandler = async () => {
     try {
-      const res = await axios.get(`${BACKEND_URL}/apply/${jobId}`, {withCredentials:true});
+      const res = await axios.get(`${BACKEND_URL}/application/apply/${jobId}`, {withCredentials:true});
       if(res.data.success) {
         setIsApplied(true); // update the local state
         const updateSingleJob = {...singleJob, applications:[...singleJob.applications,{applicant:user?._id}]}
@@ -38,7 +38,7 @@ const JobDescription = () => {
   useEffect(() => {
   const fetchSingleJob = async () => {
     try {
-      const res = await axios.get(` ${BACKEND_URL}/get/${jobId}`, {withCredentials:true});
+      const res = await axios.get(` ${BACKEND_URL}/job/get/${jobId}`, {withCredentials:true});
       if(res.data.success){
         dispatch(setSingleJob(res.data.job));
         setIsApplied(res.data.job.applications.some(application=>application.applicant === user?._id));  
