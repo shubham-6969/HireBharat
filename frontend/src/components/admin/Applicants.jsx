@@ -3,7 +3,7 @@ import Navbar from "../shared/Navbar";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import ApplicantsTable from "./ApplicantsTable";
-import { APPLICATION_API_END_POINT } from "@/utils/constant";
+import { BACKEND_URL } from "@/utils/constant";
 import { setAllApplicants } from "@/redux/applicationSlice";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ const Applicants = () => {
     const fetcAllApplicant = async () => {
       try {
         const res = await axios.get(
-          `${APPLICATION_API_END_POINT}/${params.id}/applicants`,
+          `${BACKEND_URL}/${params.id}/applicants`,
           {
             withCredentials: true,
           }
