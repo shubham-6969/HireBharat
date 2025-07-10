@@ -15,7 +15,7 @@ import AdminJobs from "./components/admin/AdminJobs";
 import PostJob from "./components/admin/PostJob";
 import Applicants from "./components/admin/Applicants";
 import ProtectedRoute from "./components/admin/ProtectedRoute";
-import RegisterNewCompany from "./components/admin/RegisterNewCompany";
+import TempCompany from "./components/admin/TempCompany";
 
 const appRouter = createBrowserRouter([
   // client side
@@ -68,7 +68,7 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/admin/companies/create/register",
-    element: <ProtectedRoute><RegisterNewCompany/></ProtectedRoute>,
+    element: <ProtectedRoute><TempCompany/></ProtectedRoute>,
   },
   {
     path: "/admin/companies/:id",

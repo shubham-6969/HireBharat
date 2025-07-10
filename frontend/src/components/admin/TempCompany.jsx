@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RegisterNewCompany = () => {
+const TempCompany = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const RegisterNewCompany = () => {
   )
 }
 
-export default RegisterNewCompany
+export default TempCompany
