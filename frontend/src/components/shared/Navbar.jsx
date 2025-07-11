@@ -8,7 +8,7 @@ import ThemeToggle from "../ui/ThemeToggle.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "sonner";
 import axios from "axios";
-import { USER_API_END_POINT } from "@/utils/constant";
+import { BACKEND_URL } from "@/utils/constant";
 import { setUser } from "@/redux/authSlice";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get(`${USER_API_END_POINT}/logout`, {
+      const res = await axios.get(`${BACKEND_URL}/user/logout`, {
         withCredentials: true,
       });
       if (res.data.success) {
