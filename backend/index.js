@@ -26,7 +26,7 @@ app.use(cors(corsOptions)); // Handle CORS
 app.use(express.json()); //  JSON body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser()); //   Cookie parser
-app.use(cors(corsOptions));
+
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
