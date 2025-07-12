@@ -36,7 +36,7 @@ app.use("/api/v1/application", applicationRoute);
 
 
 // server listening
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   connectDB();
   console.log(`Servr running on port: ${PORT}`);
