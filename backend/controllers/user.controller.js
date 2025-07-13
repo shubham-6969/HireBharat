@@ -133,6 +133,7 @@ export const login = async (req, res) => {
         httpOnly: true,
         sameSite: "None",
         secure: true,
+        domain: ".vercel.app",
       })
       .json({ message: `Wellcome back ${user.fullname}`, user, success: true });
   } catch (error) {
