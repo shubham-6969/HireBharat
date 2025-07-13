@@ -17,4 +17,10 @@ router
   .route("/profile/update")
   .post(isAuthenticated, multiUpload, updateProfile);
 
+// test route
+  router.route("/test").get((req, res) => {
+  console.log("Cookies:", req.cookies); 
+  res.json({ message: "Cookies logged" });
+});
+
 export default router;
