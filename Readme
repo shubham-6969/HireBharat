@@ -1,0 +1,62 @@
+# 💼 HireBharat
+
+**HireBharat** is a modern job portal tailored for Indian users. It enables job seekers to explore filtered job listings and apply directly, while allowing companies to post and manage job opportunities. Built using the **MERN stack**, it is optimized for **desktop usage** and supports features like **JWT-based authentication**, **job filtering**, and **dark mode** UI.
+
+![Banner](https://user-images.githubusercontent.com/your-banner-image.png)
+
+---
+
+## 🚀 Live Demo
+
+🌐 Frontend: [https://hirebharat.vercel.app](https://hirebharat.vercel.app)  
+🔗 Backend: [https://hirebharat-api.onrender.com](https://hirebharat-api.onrender.com) *(Public APIs for job listings)*
+
+---
+
+## 🔧 Tech Stack
+
+**Frontend:**
+- React + Vite
+- Tailwind CSS
+- ShadCN UI
+- Axios
+- React Router
+
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB Atlas (Mongoose ODM)
+- JWT (JSON Web Tokens)
+- bcrypt
+- CORS & Cookie Parser
+
+**Deployment:**
+- Vercel (Frontend)
+- Render (Backend)
+
+---
+
+## ✨ Features
+
+### 👥 User Features
+- Sign up / Login with JWT Auth
+- Browse all public job listings
+- Filter jobs by **location**, **industry**, and **salary range**
+- Apply to jobs (single-click application)
+- View their own applications
+
+### 🏢 Company Features
+- Company registration/login
+- Post new jobs
+- Manage (edit/delete) posted jobs
+- View applicants for each job
+
+### 🛡️ Admin (Optional for future)
+- Block/unblock users or companies
+- Monitor job postings
+- Basic analytics (planned)
+
+---
+
+## 📁 Project Structure
+
