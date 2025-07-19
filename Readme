@@ -8,8 +8,8 @@
 
 ## 🚀 Live Demo
 
-🌐 Frontend: [https://hirebharat.vercel.app](https://hirebharat.vercel.app)  
-🔗 Backend: [https://hirebharat-api.onrender.com](https://hirebharat-api.onrender.com) *(Public APIs for job listings)*
+🌐 Frontend: [https://hire-bharat.vercel.app](https://hirebharat.vercel.app)  
+
 
 ---
 
@@ -60,3 +60,24 @@
 
 ## 📁 Project Structure
 
+HireBharat/
+├── backend/                        # Express.js backend
+│   ├── controllers/               # Logic for handling requests (user, company, job)
+│   ├── middlewares/              # JWT auth, error handling
+│   ├── models/                   # Mongoose schemas (User, Company, Job, Application)
+│   ├── routes/                   # API endpoints
+│   ├── utils/                    # DB connection and helper functions
+│   ├── .gitignore
+│   ├── index.js                  # Entry point for backend server
+│   ├── package.json
+│
+├── frontend/                      # React + Vite frontend
+│   ├── public/                   # Static files (favicon, etc.)
+│   ├── src/                      # React source code (pages, components, hooks)
+│   ├── .gitignore
+│   ├── index.html
+│   ├── package.json
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│
+└── README.md
