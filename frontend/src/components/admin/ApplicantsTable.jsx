@@ -19,16 +19,16 @@ const shortlistingStatus = ["Accepted", "Rejected"];
 const ApplicantsTable = () => {
   const { applicants } = useSelector((store) => store.application);
 
-  const stausHandler = async (status, id) => {
+  const statusHandler = async (status, id) => {
     try {
        axios.defaults.withCredentials = true;
-       const res = await axios.post(`${BACKEND_URL}/status/${id}/update`, {status});
+       const res = await axios.post(`${BACKEND_URL}/application/status/${id}/update`, {status});
        console.log(res)
        if(res.data.success) {
           toast.success(res.data.message);
        }
     } catch (error) {
-      toast.error(error.response.data.message)
+      toast.error(error?.response?.data?.message || "Something went wrong")
     }
   }
 
@@ -51,7 +51,7 @@ const ApplicantsTable = () => {
         <TableBody>
           {applicants &&
             applicants?.applications?.map((item) => (
-              <tr key={item._id}>
+              <TableRow key={item._id}>
                 <TableCell>{item?.applicant?.fullname}</TableCell>
                 <TableCell>{item?.applicant?.email}</TableCell>
                 <TableCell>{item?.applicant?.phoneNumber}</TableCell>
@@ -71,7 +71,7 @@ const ApplicantsTable = () => {
                       {shortlistingStatus.map((status, index) => {
                         return (
                           <div 
-                            onClick={()=> stausHandler(status, item?._id)}
+                            onClick={()=> statusHandler(status, item?._id)}
                             key={index}
                             className="flex w-fit items-center y-2 cursor-pointer"
                           >
@@ -82,7 +82,7 @@ const ApplicantsTable = () => {
                     </PopoverContent>
                   </Popover>
                 </TableCell>
-              </tr>
+              </TableRow>
             ))}
         </TableBody>
       </Table>
